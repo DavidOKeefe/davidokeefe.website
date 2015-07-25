@@ -1,1 +1,8 @@
 <h1>Blogs</h1>
+
+<% @blogs.each do |blog| %>
+  <h3><%= blog.name %></h3>
+  <p><%= blog.description %></p>
+  <h5><%= link_to "Edit Blog Posting", edit_blog_path(blog)%></h5>
+  <h5><%= link_to "Delete Blog Posting", blog, method: :delete%></h5>
+<% end %>
